@@ -125,7 +125,7 @@ DisplayCodeSizeError=0
 RebuildAll=1
 LinkageInformationPresent=0
 COFFileTimeStamp=1244988940
-Build=349
+Build=350
 GlobalVarAddr=116
 EEPROMVarAddr=0
 [DefinedSymbolsDebug]
@@ -233,7 +233,7 @@ DisplayCodeSizeError=0
 RebuildAll=0
 LinkageInformationPresent=1
 COFFileTimeStamp=1247321669
-Build=349
+Build=350
 IncludePath0=C:\cvavreval\inc
 IncludePath1=
 IncludePath2=
@@ -539,7 +539,7 @@ Row=0
 Column=0
 ScrollPosX=0
 ScrollPosY=0
-TimeStamp=1247262349
+TimeStamp=1247329709
 [BookmarksFoldedCode]
 Files=10
 F1=main.c
