@@ -26,8 +26,10 @@ unsigned char check_signature(void);
 void set_signature(unsigned char sign);
 unsigned char get_signature(void);
 
-void send_data(unsigned char data);
+void send_bit(unsigned char bit);
+
+void send_byte(unsigned char data);
 
 void send_with_signature(unsigned char data);
 
-unsigned char receive(void);
+unsigned char receive_byte(void);

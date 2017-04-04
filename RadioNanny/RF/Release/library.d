@@ -13,7 +13,8 @@ library.d library.o: .././library.c \
  .././rf.h \
  d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
+ d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h
 
 d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -44,3 +45,5 @@ d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\d
 d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
 
 d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+
+d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:

@@ -1,7 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
-                              main.o (receive)
+                              main.o (receive_byte)
 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
                               D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny13/avr25/tiny-stack/crtattiny13.o (exit)
 
@@ -15,8 +15,10 @@ Discarded input sections
  .text          0x00000000        0x0 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
  .data          0x00000000        0x0 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
  .bss           0x00000000        0x0 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
- .text.send_data
-                0x00000000       0x1c D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+ .text.send_bit
+                0x00000000        0xc D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+ .text.send_byte
+                0x00000000       0x26 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
  .text.send_with_signature
                 0x00000000        0xe D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
  .text          0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
@@ -233,8 +235,9 @@ END GROUP
  .text.startup.main
                 0x00000028       0x28 main.o
                 0x00000028                main
- .text.receive  0x00000050       0x18 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
-                0x00000050                receive
+ .text.receive_byte
+                0x00000050       0x18 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+                0x00000050                receive_byte
  .text.check_signature
                 0x00000068        0xe D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
                 0x00000068                check_signature

@@ -8,39 +8,45 @@
 #include <avr/io.h>
 #include "rf.h"
 #include <util/delay.h>
+#include <stdbool.h>
 
 /************************************************************************/
 /*                                Transmitter                           */
 /************************************************************************/
 
-void send_data(unsigned char data)
+void send_byte(unsigned char data)
 {
 	for(unsigned char i = 0; i < 8; i++)
 	{
-		if(((data >> 7) & 1))
-		{
-			PORTB &= ~(1 << RF_TRANSMIT_PIN);
-		}
-		else
-		{
-			PORTB |= (1 << RF_TRANSMIT_PIN);
-		}
+		send_bit((data >> 7) /* & 1 */);
 		_delay_us(DELAY);
 		data <<= 1;
 	}
 }
 
+void send_bit(unsigned char bit)
+{
+	if(bit & 1)
+	{
+		PORTB &= ~(1 << RF_TRANSMIT_PIN);
+	}
+	else
+	{
+		PORTB |= (1 << RF_TRANSMIT_PIN);
+	}
+}
+
 void send_with_signature(unsigned char data)
 {
-	send_data(RF_SIGNATURE);
-	send_data(data);
+	send_byte(RF_SIGNATURE);
+	send_byte(data);
 }
 
 /************************************************************************/
 /*                             Receiver                                 */
 /************************************************************************/
 
-unsigned char receive(void)
+unsigned char receive_byte(void)
 {
 	unsigned char  res = 0;
 	unsigned char i;
@@ -59,7 +65,7 @@ unsigned char receive(void)
 
 unsigned char check_signature(void)
 {
-	if(receive() == RF_SIGNATURE)
+	if(receive_byte() == RF_SIGNATURE)
 	{
 		return 1;
 	}

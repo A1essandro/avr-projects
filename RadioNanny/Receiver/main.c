@@ -25,9 +25,9 @@ int main(void)
 		_delay_ms(100);
 		while (1)
 		{
-			if (check_signature() > 0)
+			if (check_signature())
 			{
-				data = receive();
+				data = receive_byte();
 				if(data % 2 == 0)
 				{
 					SET(PORTB, 3);
