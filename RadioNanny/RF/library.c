@@ -10,26 +10,6 @@
 #include <util/delay.h>
 
 /************************************************************************/
-/*                                Common                                */
-/************************************************************************/
-
-unsigned char _rf_signature = 0;
-
-unsigned char get_signature(void)
-{
-	if(_rf_signature != 0)
-	{
-		return _rf_signature;
-	}
-	return DEF_SIGNATURE;
-}
-
-void set_signature(unsigned char sign)
-{
-	_rf_signature = sign;
-}
-
-/************************************************************************/
 /*                                Transmitter                           */
 /************************************************************************/
 
@@ -52,7 +32,7 @@ void send_data(unsigned char data)
 
 void send_with_signature(unsigned char data)
 {
-	send_data(get_signature());
+	send_data(RF_SIGNATURE);
 	send_data(data);
 }
 
@@ -79,7 +59,7 @@ unsigned char receive(void)
 
 unsigned char check_signature(void)
 {
-	if(receive() == get_signature())
+	if(receive() == RF_SIGNATURE)
 	{
 		return 1;
 	}

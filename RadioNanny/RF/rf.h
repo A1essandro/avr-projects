@@ -5,8 +5,12 @@
 *  Author: Alexander Yermakov
 */
 
-#define DEF_SIGNATURE 0b11101011
 #define DELAY 125 //us -> ~1000 bytes per second
+
+#ifndef RF_SIGNATURE
+# warning "RF_SIGNATURE not defined for <rf.h>"
+# define RF_SIGNATURE 0b10101010
+#endif
 
 #ifndef RF_RECEIVE_PIN
 # warning "RF_RECEIVE_PIN not defined for <rf.h>"
