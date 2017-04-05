@@ -5,7 +5,7 @@
 *  Author: Alexander Yermakov
 */
 
-#define DELAY 125 //us -> ~1000 bytes per second
+#define BIT_DURATION 122 //us -> ~1MB bytes per second (continuous ideal sendig)
 
 #ifndef RF_SIGNATURE
 # warning "RF_SIGNATURE not defined for <rf.h>"

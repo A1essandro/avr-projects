@@ -19,7 +19,7 @@ void send_byte(unsigned char data)
 	for(unsigned char i = 0; i < 8; i++)
 	{
 		send_bit((data >> 7) /* & 1 */);
-		_delay_us(DELAY);
+		_delay_us(BIT_DURATION);
 		data <<= 1;
 	}
 }
@@ -58,7 +58,7 @@ unsigned char receive_byte(void)
 		{
 			res |= 1;
 		}
-		_delay_us(DELAY);
+		_delay_us(BIT_DURATION);
 	}
 	return res;
 }
