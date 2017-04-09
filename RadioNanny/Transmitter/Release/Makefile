@@ -67,8 +67,8 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 LIB_DEP+=  \
-D:/Circuits/avr-projects/RadioNanny/NannyCommon/Release/libNannyCommon.a \
-D:/Circuits/avr-projects/RadioNanny/RF/Release/libRF.a
+D:/Circuits/AvrProjects/RadioNanny/NannyCommon/Release/libNannyCommon.a \
+D:/Circuits/AvrProjects/RadioNanny/RF/Release/libRF.a
 
 LINKER_SCRIPT_DEP+= 
 
@@ -109,7 +109,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP) $(LINKER_SCRIPT_DEP)
 	@echo Building target: $@
 	@echo Invoking: AVR/GNU Linker : 5.4.0
-	$(QUOTE)D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="Transmitter.map" -Wl,--start-group -Wl,-lm -Wl,-lNannyCommon -Wl,-lRF  -Wl,--end-group -Wl,-L"D:\Circuits\avr-projects\RadioNanny\NannyCommon\Release" -Wl,-L"D:\Circuits\avr-projects\RadioNanny\RF\Release"  -Wl,--gc-sections -mmcu=attiny13 -B "D:\Circuits\AtmelStudio\7.0\Packs\atmel\ATtiny_DFP\1.2.118\gcc\dev\attiny13"  
+	$(QUOTE)D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="Transmitter.map" -Wl,--start-group -Wl,-lm -Wl,-lNannyCommon -Wl,-lRF  -Wl,--end-group -Wl,-L"D:\Circuits\AvrProjects\RadioNanny\NannyCommon\Release" -Wl,-L"D:\Circuits\AvrProjects\RadioNanny\RF\Release"  -Wl,--gc-sections -mmcu=attiny13 -B "D:\Circuits\AtmelStudio\7.0\Packs\atmel\ATtiny_DFP\1.2.118\gcc\dev\attiny13"  
 	@echo Finished building target: $@
 	"D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "Transmitter.elf" "Transmitter.hex"
 	"D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "Transmitter.elf"

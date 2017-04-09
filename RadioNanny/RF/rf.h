@@ -23,6 +23,7 @@
 #endif
 
 unsigned char check_signature(void);
+unsigned char new_check(void);
 void set_signature(unsigned char sign);
 unsigned char get_signature(void);
 

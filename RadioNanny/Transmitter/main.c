@@ -14,8 +14,8 @@
 
 void init()
 {
-	SET(DDRB, RF_TRANSMIT_PIN);
-	SET(PORTB, RF_TRANSMIT_PIN);
+	TO_H(DDRB, RF_TRANSMIT_PIN);
+	TO_H(PORTB, RF_TRANSMIT_PIN);
 }
 
 int main(void)
@@ -25,10 +25,9 @@ int main(void)
 	{
 		for (byte i=0; i<255; i++)
 		{
-			for (byte j=0; j<100; j++)
+			for (long j=0; j<1000; j++)
 			{
 				send_with_signature(i);
-				_delay_ms(10);
 			}
 		}
 	}

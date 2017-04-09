@@ -10,33 +10,36 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+#define OUTPUT_PIN 0
+
 void init()
 {
-	CLEAR(DDRB, RF_RECEIVE_PIN);
-	SET(PORTB, RF_RECEIVE_PIN);
+	TO_L(DDRB, RF_RECEIVE_PIN);
+	TO_H(DDRB, OUTPUT_PIN);
+	TO_L(PORTB, OUTPUT_PIN);
+}
+
+void timer1_init(void) {
+	TCCR0A |= (1 << COM0A1) | (1 << WGM01);
+	TCCR0B |= (1 << CS01);
+	OCR0A = 0x00;
 }
 
 int main(void)
 {
 	init();
-	byte data;
+	//timer1_init();
 	while (1)
 	{
-		_delay_ms(100);
-		while (1)
+		if (new_check())
 		{
-			if (check_signature())
+			if(receive_byte() % 2 == 1)
 			{
-				data = receive_byte();
-				if(data % 2 == 0)
-				{
-					SET(PORTB, 3);
-				}
-				else
-				{
-					CLEAR(PORTB, 3);
-				}
-				break;
+				TO_H(PORTB, OUTPUT_PIN);
+			}
+			else
+			{
+				TO_L(PORTB, OUTPUT_PIN);
 			}
 		}
 	}

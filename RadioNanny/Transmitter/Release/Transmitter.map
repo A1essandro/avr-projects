@@ -1,6 +1,6 @@
 Archive member included to satisfy reference by file (symbol)
 
-D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
                               main.o (send_with_signature)
 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
                               D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny13/avr25/tiny-stack/crtattiny13.o (exit)
@@ -12,13 +12,15 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .text          0x00000000        0x0 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
- .data          0x00000000        0x0 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
- .bss           0x00000000        0x0 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+ .text          0x00000000        0x0 D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
+ .data          0x00000000        0x0 D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
+ .bss           0x00000000        0x0 D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
  .text.receive_byte
-                0x00000000       0x18 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+                0x00000000       0x18 D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
  .text.check_signature
-                0x00000000        0xe D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+                0x00000000        0xe D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
+ .text.new_check
+                0x00000000       0x38 D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
  .text          0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
@@ -54,8 +56,8 @@ LOAD D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny13
 LOAD main.o
 START GROUP
 LOAD d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack\libm.a
-LOAD D:\Circuits\avr-projects\RadioNanny\NannyCommon\Release\libNannyCommon.a
-LOAD D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a
+LOAD D:\Circuits\AvrProjects\RadioNanny\NannyCommon\Release\libNannyCommon.a
+LOAD D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a
 END GROUP
 START GROUP
 LOAD d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a
@@ -161,7 +163,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000       0x8e
+.text           0x00000000       0x8c
  *(.vectors)
  .vectors       0x00000000       0x14 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny13/avr25/tiny-stack/crtattiny13.o
                 0x00000000                __vector_default
@@ -231,22 +233,22 @@ END GROUP
  .text.init     0x00000022        0x6 main.o
                 0x00000022                init
  .text.startup.main
-                0x00000028       0x22 main.o
+                0x00000028       0x20 main.o
                 0x00000028                main
  .text.send_bit
-                0x0000004a        0xc D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
-                0x0000004a                send_bit
+                0x00000048        0xc D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
+                0x00000048                send_bit
  .text.send_byte
-                0x00000056       0x26 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
-                0x00000056                send_byte
+                0x00000054       0x26 D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
+                0x00000054                send_byte
  .text.send_with_signature
-                0x0000007c        0xe D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
-                0x0000007c                send_with_signature
-                0x0000008a                . = ALIGN (0x2)
+                0x0000007a        0xe D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
+                0x0000007a                send_with_signature
+                0x00000088                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000008a        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
-                0x0000008a                _exit
-                0x0000008a                exit
+ .fini9         0x00000088        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
+                0x00000088                _exit
+                0x00000088                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -265,11 +267,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000008a        0x4 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
+ .fini0         0x00000088        0x4 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000008e                _etext = .
+                0x0000008c                _etext = .
 
-.data           0x00800060        0x0 load address 0x0000008e
+.data           0x00800060        0x0 load address 0x0000008c
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -286,8 +288,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x0000008e                __data_load_start = LOADADDR (.data)
-                0x0000008e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000008c                __data_load_start = LOADADDR (.data)
+                0x0000008c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -337,7 +339,7 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 D:\Circuits\avr-projects\RadioNanny\RF\Release\libRF.a(library.o)
+ .comment       0x00000030       0x31 D:\Circuits\AvrProjects\RadioNanny\RF\Release\libRF.a(library.o)
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c

@@ -71,3 +71,19 @@ unsigned char check_signature(void)
 	}
 	return 0;
 }
+
+unsigned char new_check(void)
+{
+	unsigned char on_pin, in_sign;
+	for(unsigned char i = 0; i < 8; i++)
+	{
+		on_pin = (PINB >> RF_RECEIVE_PIN) & 1;
+		in_sign = (RF_SIGNATURE >> i) & 1;
+		if(on_pin != in_sign)
+		{
+			return 0;
+		}
+		_delay_us(BIT_DURATION);
+	}
+	return 1;
+}
