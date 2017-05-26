@@ -1,31 +1,50 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include "Indicator7Segments.h"
 
-#define DS 0
-//#define OE 1
-#define ST_CP 2
-#define SH_CP 3
-#define MR 4
-#define unchar unsigned char
-
-#ifdef COMMON_CATHODE
-	int myfunc(int symbolCode)
-	{
-		return 0;
-	}
-#else
-	#ifdef COMMON_ANODE
-		int myfunc(void)
-		{
-			return 0;
-		}
-	#else
-		# warning "COMMON_CATHODE or COMMON_ANODE not defined."
-	#endif
+#ifndef ISS_PORTOUT
+# warning "ISS_PORTOUT not defined."
+#define ISS_PORTOUT PORTB
 #endif
 
-unchar DISPLAY_CONTROL[4] = {7, 6, 5, 4};
-//unchar EXTENDS_CONTROL[4] = {0, 1, 2, 3};
+#ifndef ISS_DS
+# warning "ISS_DS not defined."
+#define ISS_DS 0
+#endif
+
+#ifndef ISS_ST_CP
+# warning "ISS_ST_CP not defined."
+#define ISS_ST_CP 1
+#endif
+
+#ifndef ISS_SH_CP
+# warning "ISS_SH_CP not defined."
+#define ISS_SH_CP 2
+#endif
+
+#ifndef ISS_MR
+# warning "ISS_MR not defined."
+#define ISS_MR 3
+#endif
+
+#ifdef ISS_COMMON_CATHODE
+int myfunc(int symbolCode)
+{
+	return 0;
+}
+#else
+#ifdef ISS_COMMON_ANODE
+int myfunc(void)
+{
+	return 0;
+}
+#else
+# warning "ISS_COMMON_CATHODE or ISS_COMMON_ANODE not defined."
+#endif
+#endif
+
+unsigned char DISPLAY_CONTROL[4] = {7, 6, 5, 4};
+//unsigned char EXTENDS_CONTROL[4] = {0, 1, 2, 3};
 
 unsigned char symbols[12] = {
 	//abcdefg.
@@ -42,34 +61,34 @@ unsigned char symbols[12] = {
 	0b11111110, //pt
 };
 
-void push_data_bit(unchar bt)
+void push_data_bit(unsigned char bt)
 {
 	if (bt)
-		PORTB |= (1 << DS);
+	ISS_PORTOUT |= (1 << ISS_DS);
 	else
-		PORTB &= ~(1 << DS);
-		PORTB &= ~(1 << SH_CP);
-		PORTB |= (1 << SH_CP);
+	ISS_PORTOUT &= ~(1 << ISS_DS);
+	ISS_PORTOUT &= ~(1 << ISS_SH_CP);
+	ISS_PORTOUT |= (1 << ISS_SH_CP);
 }
 
 void latch(void)
 {
-	PORTB |= (1 << ST_CP);
-	PORTB &= ~(1 << ST_CP);
+	ISS_PORTOUT |= (1 << ISS_ST_CP);
+	ISS_PORTOUT &= ~(1 << ISS_ST_CP);
 }
 
 void reset(void)
 {
-	PORTB &= ~(1 << MR);
+	ISS_PORTOUT &= ~(1 << ISS_MR);
 	_delay_ms(3);
 	latch();
-	PORTB |= (1 << MR);
+	ISS_PORTOUT |= (1 << ISS_MR);
 	latch();
 }
 
 void push_data(unsigned int data)
 {
-	unchar f;
+	unsigned char f;
 	for(f = 0; f < 16; f++)
 	{
 		push_data_bit(data & 1);
@@ -78,12 +97,12 @@ void push_data(unsigned int data)
 	latch();
 }
 
-unsigned int get_symbol(unchar n)
+unsigned int get_symbol(unsigned char n)
 {
 	return symbols[n] << 8;
 }
 
-unsigned int frame(unchar f, unchar symbol)
+unsigned int frame(unsigned char f, unsigned char symbol)
 {
 	return (1 << DISPLAY_CONTROL[f]) | get_symbol(symbol);
 }

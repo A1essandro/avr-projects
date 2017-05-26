@@ -111,8 +111,6 @@ $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP) $(LINKER
 	@echo Finished building target: $@
 	"D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "FrequencyMeter.elf" "FrequencyMeter.hex"
 	"D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "FrequencyMeter.elf" "FrequencyMeter.eep" || exit 0
-	"D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "FrequencyMeter.elf" > "FrequencyMeter.lss"
-	"D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "FrequencyMeter.elf" "FrequencyMeter.srec"
 	"D:\Circuits\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "FrequencyMeter.elf"
 	
 	

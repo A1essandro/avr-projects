@@ -12,7 +12,8 @@ library.d library.o: .././library.c \
  d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
+ d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ .././Indicator7Segments.h
 
 d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -41,3 +42,5 @@ d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\d
 d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
 
 d:\circuits\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+
+.././Indicator7Segments.h:
