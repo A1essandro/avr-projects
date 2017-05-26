@@ -28,16 +28,8 @@
 #endif
 
 #ifdef ISS_COMMON_CATHODE
-int myfunc(int symbolCode)
-{
-	return 0;
-}
 #else
 #ifdef ISS_COMMON_ANODE
-int myfunc(void)
-{
-	return 0;
-}
 #else
 # warning "ISS_COMMON_CATHODE or ISS_COMMON_ANODE not defined."
 #endif
@@ -61,17 +53,21 @@ unsigned char symbols[12] = {
 	0b11111110, //pt
 };
 
-void push_data_bit(unsigned char bt)
+void _push_data_bit(unsigned char bt)
 {
 	if (bt)
-	ISS_PORTOUT |= (1 << ISS_DS);
+	{
+		ISS_PORTOUT |= (1 << ISS_DS);
+	}
 	else
-	ISS_PORTOUT &= ~(1 << ISS_DS);
+	{
+		ISS_PORTOUT &= ~(1 << ISS_DS);
+	}
 	ISS_PORTOUT &= ~(1 << ISS_SH_CP);
 	ISS_PORTOUT |= (1 << ISS_SH_CP);
 }
 
-void latch(void)
+void _latch(void)
 {
 	ISS_PORTOUT |= (1 << ISS_ST_CP);
 	ISS_PORTOUT &= ~(1 << ISS_ST_CP);
@@ -81,9 +77,9 @@ void reset(void)
 {
 	ISS_PORTOUT &= ~(1 << ISS_MR);
 	_delay_ms(3);
-	latch();
+	_latch();
 	ISS_PORTOUT |= (1 << ISS_MR);
-	latch();
+	_latch();
 }
 
 void push_data(unsigned int data)
@@ -91,18 +87,22 @@ void push_data(unsigned int data)
 	unsigned char f;
 	for(f = 0; f < 16; f++)
 	{
-		push_data_bit(data & 1);
+		#ifdef ISS_COMMON_CATHODE
+		_push_data_bit(data & 1);
+		#else
+		_push_data_bit(!(data & 1));
+		#endif
 		data = data >> 1;
 	}
-	latch();
+	_latch();
 }
 
-unsigned int get_symbol(unsigned char n)
+unsigned int _get_symbol(unsigned char n)
 {
 	return symbols[n] << 8;
 }
 
 unsigned int frame(unsigned char f, unsigned char symbol)
 {
-	return (1 << DISPLAY_CONTROL[f]) | get_symbol(symbol);
+	return (1 << DISPLAY_CONTROL[f]) | _get_symbol(symbol);
 }

@@ -1,7 +1,11 @@
 Archive member included to satisfy reference by file (symbol)
 
+D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+                              main.o (reset)
 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
                               D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o (exit)
+d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+                              D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o) (__do_copy_data)
 
 Discarded input sections
 
@@ -10,6 +14,19 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .data          0x00000000        0x0 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .bss           0x00000000        0x0 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .text._push_data_bit
+                0x00000000       0x10 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .text.push_data
+                0x00000000       0x26 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .text._get_symbol
+                0x00000000        0xe D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .text.frame    0x00000000       0x26 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .data.symbols  0x00000000        0xc D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+ .data.DISPLAY_CONTROL
+                0x00000000        0x4 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
  .text          0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
@@ -26,6 +43,22 @@ Discarded input sections
                 0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
 
 Memory Configuration
 
@@ -45,6 +78,7 @@ LOAD D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny23
 LOAD main.o
 START GROUP
 LOAD d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack\libm.a
+LOAD D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a
 END GROUP
 START GROUP
 LOAD d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a
@@ -150,7 +184,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000       0x3a
+.text           0x00000000       0x6e
  *(.vectors)
  .vectors       0x00000000       0x26 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
                 0x00000000                __vector_default
@@ -191,6 +225,8 @@ END GROUP
  *(.init3)
  *(.init3)
  *(.init4)
+ .init4         0x0000002e       0x16 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_copy_data.o)
+                0x0000002e                __do_copy_data
  *(.init4)
  *(.init5)
  *(.init5)
@@ -201,38 +237,42 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000002e        0x4 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
+ .init9         0x00000044        0x4 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
  *(.init9)
  *(.text)
- .text          0x00000032        0x2 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
-                0x00000032                __vector_1
-                0x00000032                __vector_12
-                0x00000032                __bad_interrupt
-                0x00000032                __vector_6
-                0x00000032                __vector_3
-                0x00000032                __vector_11
-                0x00000032                __vector_13
-                0x00000032                __vector_17
-                0x00000032                __vector_7
-                0x00000032                __vector_5
-                0x00000032                __vector_4
-                0x00000032                __vector_9
-                0x00000032                __vector_2
-                0x00000032                __vector_15
-                0x00000032                __vector_8
-                0x00000032                __vector_14
-                0x00000032                __vector_10
-                0x00000032                __vector_16
-                0x00000032                __vector_18
-                0x00000034                . = ALIGN (0x2)
+ .text          0x00000048        0x2 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
+                0x00000048                __vector_1
+                0x00000048                __vector_12
+                0x00000048                __bad_interrupt
+                0x00000048                __vector_6
+                0x00000048                __vector_3
+                0x00000048                __vector_11
+                0x00000048                __vector_13
+                0x00000048                __vector_17
+                0x00000048                __vector_7
+                0x00000048                __vector_5
+                0x00000048                __vector_4
+                0x00000048                __vector_9
+                0x00000048                __vector_2
+                0x00000048                __vector_15
+                0x00000048                __vector_8
+                0x00000048                __vector_14
+                0x00000048                __vector_10
+                0x00000048                __vector_16
+                0x00000048                __vector_18
+                0x0000004a                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x00000034        0x2 main.o
-                0x00000034                main
-                0x00000036                . = ALIGN (0x2)
+ .text.main     0x0000004a        0x4 main.o
+                0x0000004a                main
+ .text._latch   0x0000004e        0x6 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+                0x0000004e                _latch
+ .text.reset    0x00000054       0x16 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+                0x00000054                reset
+                0x0000006a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000036        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
-                0x00000036                _exit
-                0x00000036                exit
+ .fini9         0x0000006a        0x0 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
+                0x0000006a                _exit
+                0x0000006a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -251,12 +291,12 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000036        0x4 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
+ .fini0         0x0000006a        0x4 d:/circuits/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000003a                _etext = .
+                0x0000006e                _etext = .
 
-.data           0x00800060        0x0 load address 0x0000003a
-                [!provide]                PROVIDE (__data_start, .)
+.data           0x00800060        0x0 load address 0x0000006e
+                0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
  *(.rodata)
@@ -264,7 +304,7 @@ END GROUP
  *(.gnu.linkonce.d*)
                 0x00800060                . = ALIGN (0x2)
                 0x00800060                _edata = .
-                [!provide]                PROVIDE (__data_end, .)
+                0x00800060                PROVIDE (__data_end, .)
 
 .bss            0x00800060        0x0
                 [!provide]                PROVIDE (__bss_start, .)
@@ -272,8 +312,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x0000003a                __data_load_start = LOADADDR (.data)
-                0x0000003a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000006e                __data_load_start = LOADADDR (.data)
+                0x0000006e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -323,6 +363,7 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
+ .comment       0x00000030       0x31 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
@@ -344,41 +385,50 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x20
+.debug_aranges  0x00000000       0x68
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x48 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x48b
+.debug_info     0x00000000      0x71f
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x40e D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
- .debug_info    0x0000040e       0x7d main.o
+ .debug_info    0x0000040e       0x98 main.o
+ .debug_info    0x000004a6      0x279 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
-.debug_abbrev   0x00000000      0x420
+.debug_abbrev   0x00000000      0x60b
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x3d7 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
- .debug_abbrev  0x000003d7       0x49 main.o
+ .debug_abbrev  0x000003d7       0x68 main.o
+ .debug_abbrev  0x0000043f      0x1cc D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
-.debug_line     0x00000000      0x137
+.debug_line     0x00000000      0x351
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x100 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
- .debug_line    0x00000100       0x37 main.o
+ .debug_line    0x00000100       0x6e main.o
+ .debug_line    0x0000016e      0x1e3 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
-.debug_frame    0x00000000       0x24
+.debug_frame    0x00000000       0xa8
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 main.o
+ .debug_frame   0x00000024       0x84 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
-.debug_str      0x00000000      0x295
+.debug_str      0x00000000      0x390
  *(.debug_str)
  .debug_str     0x00000000      0x163 D:/Circuits/AtmelStudio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny2313/avr25/tiny-stack/crtattiny2313.o
- .debug_str     0x00000163      0x132 main.o
-                                0x166 (size before relaxing)
+ .debug_str     0x00000163      0x138 main.o
+                                0x16c (size before relaxing)
+ .debug_str     0x0000029b       0xf5 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
+                                0x220 (size before relaxing)
 
-.debug_loc
+.debug_loc      0x00000000      0x12d
  *(.debug_loc)
+ .debug_loc     0x00000000      0x12d D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -398,9 +448,10 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x10
+.debug_ranges   0x00000000       0x48
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 main.o
+ .debug_ranges  0x00000010       0x38 D:\Circuits\AvrProjects\FrequencyMeter\Indicator7Segments\Debug\libIndicator7Segments.a(library.o)
 
 .debug_macro
  *(.debug_macro)
